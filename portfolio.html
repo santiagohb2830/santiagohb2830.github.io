@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Santiago Hernandez - Systems Engineer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#cfc4c5",
+                        "error-container": "#ffdad6",
+                        "outline": "#7e7576",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#00530e",
+                        "on-error-container": "#93000a",
+                        "background": "#f9f9f9",
+                        "on-secondary-container": "#5f6161",
+                        "inverse-surface": "#2f3131",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#1b1b1b",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed-variant": "#474747",
+                        "secondary": "#5d5f5f",
+                        "tertiary-fixed-dim": "#00e639",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "surface-dim": "#dadada",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#72ff70",
+                        "primary": "#000000",
+                        "secondary-fixed": "#e2e2e2",
+                        "secondary-container": "#dcdddd",
+                        "surface-muted": "#F2F2F2",
+                        "surface": "#f9f9f9",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-container": "#009923",
+                        "tertiary-container": "#002203",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#4c4546",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-container-highest": "#e2e2e2",
+                        "system-blue": "#0047FF",
+                        "terminal-green": "#00FF41",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "border-ink": "#000000",
+                        "inverse-primary": "#c6c6c6",
+                        "on-background": "#1a1c1c",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#002203",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-secondary-fixed-variant": "#454747",
+                        "tertiary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#eeeeee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "base": "4px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "code-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "label-mono": ["JetBrains Mono"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "code-sm": ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-mono": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    },
+                    boxShadow: {
+                        'hard': '4px 4px 0px 0px #000000',
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f9f9f9; }
+        .window-card {
+            border: 1px solid #000;
+            background-color: #fff;
+            box-shadow: 4px 4px 0px 0px #000;
+        }
+        .window-titlebar {
+            height: 32px;
+            background-color: #F2F2F2;
+            border-bottom: 1px solid #000;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+        }
+        .window-controls {
+            display: flex;
+            gap: 4px;
+        }
+        .window-btn {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid #000;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-primary pb-20 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full flex justify-between items-center px-margin-mobile py-4 bg-surface dark:bg-surface-container-lowest border-b border-border-ink z-50">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined font-label-mono text-label-mono">terminal</span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary font-bold">S.HERNANDEZ_v2.5</span>
+</div>
+<button class="md:hidden flex items-center justify-center p-2 text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150 border border-transparent">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-6">
+<a class="font-label-mono text-label-mono text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150 px-2 py-1" href="#about">ABOUT</a>
+<a class="font-label-mono text-label-mono text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150 px-2 py-1" href="#projects">PROJECTS</a>
+<a class="font-label-mono text-label-mono text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150 px-2 py-1" href="#experience">EXPERIENCE</a>
+<a class="font-label-mono text-label-mono text-primary hover:bg-primary hover:text-on-primary transition-colors duration-150 px-2 py-1" href="#contact">CONTACT</a>
+</nav>
+</header>
+<main class="pt-[80px] px-margin-mobile flex flex-col gap-12 max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="pt-8" id="hero">
+<div class="window-card mb-8">
+<div class="window-titlebar">
+<div class="window-controls mr-4">
+<div class="window-btn bg-background"></div>
+<div class="window-btn bg-background"></div>
+<div class="window-btn bg-background"></div>
+</div>
+<span class="font-code-sm text-code-sm text-primary">sys.init()</span>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="font-code-sm text-code-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+<span>Bogotá, Colombia</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-display md:text-display font-bold uppercase tracking-tighter leading-none">
+                        SANTIAGO<br/>HERNANDEZ
+                    </h1>
+<div class="w-full h-px bg-primary my-2 relative">
+<span class="absolute top-1/2 left-0 -translate-y-1/2 bg-surface px-2 font-code-sm text-code-sm text-primary border border-primary ml-4">STATUS: ONLINE</span>
+</div>
+<p class="font-body-md text-body-md text-primary max-w-lg mt-4">
+                        Estudiante de Ingeniería de Sistemas en la Pontificia Universidad Javeriana. Desarrollo software, aplico estructuras de datos e inteligencia artificial, y construyo soluciones que resuelven problemas reales.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="border border-primary bg-primary text-on-primary px-6 py-3 font-label-mono text-label-mono uppercase hover:bg-surface hover:text-primary transition-colors text-center" href="#projects">Ver Proyectos</a>
+<a class="border border-primary bg-surface text-primary px-6 py-3 font-label-mono text-label-mono uppercase hover:bg-primary hover:text-on-primary transition-colors text-center" href="#contact">Contactarme</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="border-t border-primary pt-12" id="about">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-code-sm text-code-sm border border-primary px-2 py-1">01</span>
+<h2 class="font-headline-md text-headline-md font-bold uppercase">Sobre Mí</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
+<p>&gt; Soy estudiante de Ingeniería de Sistemas en la Pontificia Universidad Javeriana, actualmente en séptimo semestre. Me apasiona construir soluciones desde cero — desde la lógica del algoritmo hasta la experiencia del usuario.</p>
+<p>&gt; Tengo experiencia en programación con Java, Python y C++, administración de sistemas Linux y bases de datos SQL. Además, he aplicado metodologías lean y pensamiento de producto en proyectos de emprendimiento real.</p>
+<p class="font-label-mono text-label-mono text-primary mt-4 border-l-2 border-primary pl-4">Inglés C1+ // Monitor académico // Emprendedor en etapa temprana.</p>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Skill Group 1 -->
+<div class="window-card">
+<div class="window-titlebar">
+<span class="font-code-sm text-code-sm uppercase">LENGUAJES</span>
+</div>
+<div class="p-4 flex flex-wrap gap-2">
+<span class="border border-primary bg-primary text-on-primary font-code-sm text-code-sm px-2 py-1">Python</span>
+<span class="border border-primary bg-primary text-on-primary font-code-sm text-code-sm px-2 py-1">Java</span>
+<span class="border border-primary font-code-sm text-code-sm px-2 py-1">C++</span>
+<span class="border border-primary font-code-sm text-code-sm px-2 py-1">SQL</span>
+</div>
+</div>
+<!-- Skill Group 2 -->
+<div class="window-card">
+<div class="window-titlebar">
+<span class="font-code-sm text-code-sm uppercase">HERRAMIENTAS &amp; SISTEMAS</span>
+</div>
+<div class="p-4 flex flex-wrap gap-2">
+<span class="border border-primary font-code-sm text-code-sm px-2 py-1">Git / GitHub</span>
+<span class="border border-primary font-code-sm text-code-sm px-2 py-1">Linux (Red Hat)</span>
+<span class="border border-primary font-code-sm text-code-sm px-2 py-1">Power BI</span>
+<span class="border border-primary font-code-sm text-code-sm px-2 py-1">Bash</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="border-t border-primary pt-12" id="projects">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-code-sm text-code-sm border border-primary px-2 py-1">02</span>
+<h2 class="font-headline-md text-headline-md font-bold uppercase">Proyectos</h2>
+</div>
+<div class="flex flex-col gap-8">
+<!-- Featured Project 1 -->
+<div class="window-card bg-primary text-on-primary border-primary">
+<div class="window-titlebar bg-primary-container border-b border-surface">
+<div class="window-controls mr-4">
+<div class="window-btn border-surface bg-transparent"></div>
+<div class="window-btn border-surface bg-transparent"></div>
+<div class="window-btn border-surface bg-transparent"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-primary">cuentas_claras.exe</span>
+</div>
+<div class="p-6">
+<div class="font-code-sm text-code-sm border border-surface inline-block px-2 py-1 mb-4">DESTACADO / EMPRENDIMIENTO</div>
+<h3 class="font-headline-md text-headline-md font-bold mb-4 uppercase">Cuentas Claras</h3>
+<p class="font-body-md text-body-md text-surface-dim mb-6">Plataforma SaaS que automatiza la declaración de impuestos para personas naturales, freelancers y pequeñas empresas en Colombia usando inteligencia artificial. Clasifica ingresos y gastos, detecta deducciones y genera declaraciones listas para la DIAN.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="border border-surface text-surface font-code-sm text-code-sm px-2 py-1">Python</span>
+<span class="border border-surface text-surface font-code-sm text-code-sm px-2 py-1">IA / ML</span>
+<span class="border border-surface bg-surface text-primary font-code-sm text-code-sm px-2 py-1">SaaS</span>
+<span class="border border-surface text-surface font-code-sm text-code-sm px-2 py-1">Lean Startup</span>
+</div>
+<a class="inline-flex items-center gap-2 font-label-mono text-label-mono uppercase hover:text-terminal-green transition-colors" href="#contact">
+                            Solicitar Información
+                            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="window-card">
+<div class="window-titlebar">
+<span class="font-code-sm text-code-sm text-primary">laberintos_ia.py</span>
+</div>
+<div class="p-6">
+<div class="font-code-sm text-code-sm border border-primary inline-block px-2 py-1 mb-4">IA / PYTHON</div>
+<h3 class="font-headline-md text-headline-md font-bold mb-4 uppercase">Resolución de Laberintos con IA</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Implementación y comparación de BFS, DFS y A* para resolver laberintos representados como matrices. La búsqueda A* usa distancia Manhattan como heurística para encontrar la ruta óptima de forma eficiente.</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="border border-primary font-code-sm text-code-sm px-2 py-1">Python</span>
+<span class="border border-primary font-code-sm text-code-sm px-2 py-1">BFS / DFS</span>
+<span class="border border-primary font-code-sm text-code-sm px-2 py-1">A*</span>
+</div>
+<a class="inline-flex items-center gap-2 font-label-mono text-label-mono uppercase hover:bg-primary hover:text-on-primary border border-transparent px-2 py-1 transition-colors" href="#">
+                            GitHub
+                            <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="window-card border-l-4 border-l-primary">
+<div class="window-titlebar">
+<span class="font-code-sm text-code-sm text-primary">lulo_stack.ts</span>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4 flex-wrap gap-2">
+<div class="font-code-sm text-code-sm border border-primary inline-block px-2 py-1">DESARROLLO WEB</div>
+<div class="font-code-sm text-code-sm bg-primary text-on-primary px-2 py-1">BACKEND + FRONTEND</div>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold mb-4 uppercase">LULO — Visor de Procesos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Aplicación web full-stack para visualizar y editar procesos de negocio con separación multi-tenant por empresa. Arquitectura en capas y SPA en TypeScript.</p>
+<div class="grid grid-cols-2 gap-4 mb-6 border-t border-b border-primary py-4">
+<div>
+<span class="font-code-sm text-code-sm font-bold uppercase block mb-2">BACKEND</span>
+<div class="flex flex-wrap gap-1">
+<span class="font-code-sm text-code-sm bg-surface-muted px-1">Java</span>
+<span class="font-code-sm text-code-sm bg-surface-muted px-1">API REST</span>
+<span class="font-code-sm text-code-sm bg-surface-muted px-1">Kubernetes</span>
+</div>
+</div>
+<div>
+<span class="font-code-sm text-code-sm font-bold uppercase block mb-2">FRONTEND</span>
+<div class="flex flex-wrap gap-1">
+<span class="font-code-sm text-code-sm bg-surface-muted px-1">TypeScript</span>
+<span class="font-code-sm text-code-sm bg-surface-muted px-1">SPA</span>
+<span class="font-code-sm text-code-sm bg-surface-muted px-1">Docker</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<a class="inline-flex items-center gap-1 font-label-mono text-label-mono uppercase hover:bg-primary hover:text-on-primary border border-transparent px-2 py-1 transition-colors" href="#">
+                                Git_Back <span class="material-symbols-outlined" style="font-size: 14px;">link</span>
+</a>
+<a class="inline-flex items-center gap-1 font-label-mono text-label-mono uppercase hover:bg-primary hover:text-on-primary border border-transparent px-2 py-1 transition-colors" href="#">
+                                Git_Front <span class="material-symbols-outlined" style="font-size: 14px;">link</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="border-t border-primary pt-12" id="experience">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-code-sm text-code-sm border border-primary px-2 py-1">03</span>
+<h2 class="font-headline-md text-headline-md font-bold uppercase">Experiencia</h2>
+</div>
+<div class="flex flex-col border-l border-primary ml-4">
+<!-- Timeline Item 1 -->
+<div class="relative pl-6 pb-8">
+<div class="absolute left-0 top-0 w-3 h-3 bg-primary -translate-x-[6.5px]"></div>
+<div class="font-code-sm text-code-sm mb-1 text-on-surface-variant">AGOSTO 2025</div>
+<h3 class="font-headline-md text-headline-md font-bold uppercase leading-tight">Monitor Académico</h3>
+<div class="font-label-mono text-label-mono text-primary mb-2">Pontificia Universidad Javeriana</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Apoyo académico en cursos de sistemas de información y modelos de negocio. Acompañamiento a estudiantes en conceptos técnicos.</p>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-6 pb-8">
+<div class="absolute left-0 top-0 w-3 h-3 bg-surface border border-primary -translate-x-[6.5px]"></div>
+<div class="font-code-sm text-code-sm mb-1 text-on-surface-variant">ENE 2022 – 2024</div>
+<h3 class="font-headline-md text-headline-md font-bold uppercase leading-tight">Atención al Cliente</h3>
+<div class="font-label-mono text-label-mono text-primary mb-2">El Chato</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Coordinación con equipos de trabajo para garantizar eficiencia operativa en entornos de alta exigencia.</p>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative pl-6">
+<div class="absolute left-0 top-0 w-3 h-3 bg-surface border border-primary -translate-x-[6.5px]"></div>
+<div class="font-code-sm text-code-sm mb-1 text-on-surface-variant">FORMACIÓN</div>
+<h3 class="font-headline-md text-headline-md font-bold uppercase leading-tight">Red Hat System Admin I</h3>
+<div class="font-label-mono text-label-mono text-primary mb-2">Red Hat (RH124)</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="border-t border-primary pt-12 pb-12 text-center" id="contact">
+<h2 class="font-display text-headline-lg-mobile md:text-display font-bold uppercase mb-4">Hablemos.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto mb-8">
+                Abierto a oportunidades de práctica, colaboración en proyectos o simplemente una conversación sobre tecnología.
+            </p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<a class="window-card p-4 hover:bg-primary hover:text-on-primary transition-colors group flex flex-col items-center" href="mailto:santiagohb2830@gmail.com">
+<span class="font-code-sm text-code-sm uppercase mb-1 opacity-70">EMAIL</span>
+<span class="font-label-mono text-label-mono">santiagohb2830@gmail.com</span>
+</a>
+<a class="window-card p-4 hover:bg-primary hover:text-on-primary transition-colors group flex flex-col items-center" href="https://www.linkedin.com/in/santiagohb2830-a7b2b02ab">
+<span class="font-code-sm text-code-sm uppercase mb-1 opacity-70">LINKEDIN</span>
+<span class="font-label-mono text-label-mono">in/santiagohb2830</span>
+</a>
+<a class="window-card p-4 hover:bg-primary hover:text-on-primary transition-colors group flex flex-col items-center" href="https://github.com/santiagohb2830">
+<span class="font-code-sm text-code-sm uppercase mb-1 opacity-70">GITHUB</span>
+<span class="font-label-mono text-label-mono">@santiagohb2830</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-8 px-margin-mobile flex flex-col items-center gap-4 text-center bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface border-t border-border-ink dark:border-outline-variant font-label-mono text-label-mono mt-12">
+<p>SHB // 2026</p>
+<div class="flex gap-4">
+<a class="hover:text-system-blue transition-colors" href="https://github.com/santiagohb2830">GITHUB</a>
+<a class="hover:text-system-blue transition-colors" href="https://www.linkedin.com/in/santiagohb2830-a7b2b02ab">LINKEDIN</a>
+<a class="hover:text-system-blue transition-colors" href="#">SOURCE</a>
+</div>
+</footer>
+</body></html>
